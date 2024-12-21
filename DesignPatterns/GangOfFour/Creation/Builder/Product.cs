@@ -18,5 +18,7 @@ namespace DesignPatterns.GangOfFour.Creation.Builder
         {
             _parts.Add(part);
         }
+
+        public List<string> ShowParts { get { return _parts; } }
     }
 }

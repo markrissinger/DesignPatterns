@@ -4,7 +4,7 @@ namespace TestProject.GangOfFour.Singleton
     public class TestSingleton
     {
         [Fact]
-        public void TestSingletonInstance()
+        public void TestSingletonCreation()
         {
             var singleton1 = DesignPatterns.GangOfFour.Creation.Singleton.Singleton.Instance;
             var singleton2 = DesignPatterns.GangOfFour.Creation.Singleton.Singleton.Instance;
@@ -12,7 +12,7 @@ namespace TestProject.GangOfFour.Singleton
         }
 
         [Fact]
-        public void TestSingletonDoubleLockInstance()
+        public void TestSingletonDoubleLockCreation()
         {
             var singleton1 = DesignPatterns.GangOfFour.Creation.Singleton.DoubleLockSingleton.Instance;
             var singleton2 = DesignPatterns.GangOfFour.Creation.Singleton.DoubleLockSingleton.Instance;

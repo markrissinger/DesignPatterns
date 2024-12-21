@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.GangOfFour.Creation.Singleton
 {
+    /// <summary>
+    /// Example of how to setup/use a Singleton class using double locks
+    /// </summary>
     public sealed class DoubleLockSingleton
     {
         private static volatile DoubleLockSingleton instance;
