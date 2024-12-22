@@ -8,7 +8,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="GangOfFour\Behavioral\" />
+    <Folder Include="GangOfFour\Behavioral\Command\" />
+    <Folder Include="GangOfFour\Behavioral\Iterator\" />
+    <Folder Include="GangOfFour\Behavioral\Memento\" />
+    <Folder Include="GangOfFour\Behavioral\Mediator\" />
+    <Folder Include="GangOfFour\Behavioral\ChainOfResponsibility\" />
+    <Folder Include="GangOfFour\Behavioral\Interpreter\" />
+    <Folder Include="GangOfFour\Behavioral\State\" />
+    <Folder Include="GangOfFour\Behavioral\Template\" />
+    <Folder Include="GangOfFour\Behavioral\StrategyPolicy\" />
+    <Folder Include="GangOfFour\Behavioral\Observer\" />
+    <Folder Include="GangOfFour\Behavioral\Visitor\" />
+    <Folder Include="GangOfFour\Structural\Composite\" />
+    <Folder Include="GangOfFour\Structural\Bridge\" />
   </ItemGroup>
 
 </Project>
