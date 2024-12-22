@@ -8,36 +8,39 @@ namespace DesignPatterns.GangOfFour.Structural.Flyweight
 {
     public class RobotFactory
     {
-        Dictionary<FlyweightConstants.RobotType, IRobot> shapes = new();
+        private static Dictionary<FlyweightConstants.RobotType, IRobot> _existingRobots = new();
 
-        public int TotalObjectsCreated
+        public IRobot GetRobot(FlyweightConstants.RobotType robotType)
         {
-            get { return shapes.Count; }
-        }
+            IRobot requestedRobot = null;
 
-        public IRobot GetRobotFromFactory(FlyweightConstants.RobotType robotType)
-        {
-            IRobot respectiveRobot = null;
-
-            if (shapes.ContainsKey(robotType))
+            if (_existingRobots.ContainsKey(robotType))
             {
-                respectiveRobot = shapes[robotType];
+                requestedRobot = _existingRobots[robotType];
             }
             else
             {
                 switch (robotType)
                 {
                     case FlyweightConstants.RobotType.Small:
-                        shapes.Add(FlyweightConstants.RobotType.Small, new Robot());
+                        requestedRobot = new Robot(FlyweightConstants.RobotType.Small);
+                        _existingRobots.Add(requestedRobot.RobotType, requestedRobot);
                         break;
                     case FlyweightConstants.RobotType.Large:
-                        shapes.Add(FlyweightConstants.RobotType.Large, new LargeRobot());
+                        requestedRobot = new Robot(FlyweightConstants.RobotType.Large);
+                        _existingRobots.Add(requestedRobot.RobotType, requestedRobot);
                         break;
                     default:
                         throw new Exception("Invalid Robot Type.");
                 }
             }
-            return respectiveRobot;
+            return requestedRobot;
+        }
+
+        // Count to help keep track of number of objects
+        public int TotalObjectsCreated
+        {
+            get { return _existingRobots.Count; }
         }
     }
 }
