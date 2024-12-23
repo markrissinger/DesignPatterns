@@ -19,7 +19,6 @@
     <Folder Include="GangOfFour\Behavioral\StrategyPolicy\" />
     <Folder Include="GangOfFour\Behavioral\Observer\" />
     <Folder Include="GangOfFour\Behavioral\Visitor\" />
-    <Folder Include="GangOfFour\Structural\Bridge\" />
   </ItemGroup>
 
 </Project>
