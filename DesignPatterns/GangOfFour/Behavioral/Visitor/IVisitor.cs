@@ -8,5 +8,6 @@ namespace DesignPatterns.GangOfFour.Behavioral.Visitor
 {
     public interface IVisitor
     {
+        public void Visit(OriginalClass originalClass);
     }
 }

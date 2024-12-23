@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.GangOfFour.Behavioral.Visitor
 {
-    public class Visitor
+    public class Visitor : IVisitor
     {
+        public void Visit(OriginalClass originalClass)
+        {
+            originalClass.Tracker = 100;
+        }
     }
 }

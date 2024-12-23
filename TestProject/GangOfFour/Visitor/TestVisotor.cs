@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DesignPatterns.GangOfFour.Behavioral.Visitor;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,11 @@ namespace TestProject.GangOfFour.Visitor
         [Fact]
         public void TestVisitorBehavior()
         {
+            IVisitor visitor = new DesignPatterns.GangOfFour.Behavioral.Visitor.Visitor();
+            OriginalClass originalClass = new();
+            originalClass.Accept(visitor);
+
+            Assert.True(originalClass.Tracker == 100);
         }
     }
 }
