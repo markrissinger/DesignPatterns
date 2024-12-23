@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.GangOfFour.Behavioral.Visitor
 {
-    public interface IOriginalInterface
+    public interface IEmployee
     {
-        public void Accept(IVisitor visitor);
+        string PrintStructure();
+        bool Accept(IVisitor visitor);
     }
 }

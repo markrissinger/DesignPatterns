@@ -8,9 +8,14 @@ namespace DesignPatterns.GangOfFour.Behavioral.Visitor
 {
     public class Visitor : IVisitor
     {
-        public void Visit(OriginalClass originalClass)
+        public bool VisitCompositeElement(CompositeEmployee employee)
         {
-            originalClass.Tracker = 100;
+            return employee.YearsOfExperience > 15;
+        }
+
+        public bool VisitLeafElement(Employee employee)
+        {
+            return employee.YearsOfExperience > 12;
         }
     }
 }

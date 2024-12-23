@@ -8,6 +8,7 @@ namespace DesignPatterns.GangOfFour.Behavioral.Visitor
 {
     public interface IVisitor
     {
-        public void Visit(OriginalClass originalClass);
+        public bool VisitCompositeElement(CompositeEmployee employee);
+        public bool VisitLeafElement(Employee employee);
     }
 }
