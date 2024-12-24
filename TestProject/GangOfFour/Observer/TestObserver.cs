@@ -13,9 +13,9 @@ namespace TestProject.GangOfFour.Observer
         public void TestObserverBehavior()
         {
             // Initialize
-            Observer1 observer1 = new Observer1("Obs1");
-            Observer1 observer2 = new Observer1("Obs2");
-            Observer2 observer3 = new Observer2("Obs3");
+            Observer1 observer1 = new("Obs1");
+            Observer1 observer2 = new("Obs2");
+            Observer2 observer3 = new("Obs3");
 
             Subject subject = new();
 
