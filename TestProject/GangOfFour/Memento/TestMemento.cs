@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DesignPatterns.GangOfFour.Behavioral.Memento;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,11 @@ namespace TestProject.GangOfFour.Memento
         [Fact]
         public void TestMementoBehavior()
         {
+            // Initialize - Originator's initial state should be "initialized"
+            Originator oringalObject = new();
+            DesignPatterns.GangOfFour.Behavioral.Memento.Memento memento = oringalObject.GetMemento();
+
+            Assert.Equal("initialized", memento.State);
         }
     }
 }

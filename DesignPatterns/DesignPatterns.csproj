@@ -8,12 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="GangOfFour\Behavioral\Iterator\" />
-    <Folder Include="GangOfFour\Behavioral\Memento\" />
-    <Folder Include="GangOfFour\Behavioral\Mediator\" />
     <Folder Include="GangOfFour\Behavioral\ChainOfResponsibility\" />
     <Folder Include="GangOfFour\Behavioral\Interpreter\" />
-    <Folder Include="GangOfFour\Behavioral\State\" />
   </ItemGroup>
 
 </Project>
